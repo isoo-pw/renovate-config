@@ -1,6 +1,6 @@
 # renovate-config
 
-Shared [Renovate](https://docs.renovatebot.com/) settings for 0xiso
+Shared [Renovate](https://docs.renovatebot.com/) settings for isoo-pw
 repositories, applied through the Mend Renovate app's
 [inherited config](https://docs.renovatebot.com/mend-hosted/hosted-apps-config/):
 `org-inherited-config.json` in this repository is applied to every repository
@@ -24,12 +24,11 @@ Requirements:
 - Mend enables inheritance when it sees a commit to `org-inherited-config.json`.
   If it does not take effect (e.g. the file was committed before the app could
   see this repository), push a new commit to it.
-- The Mend docs describe this for organizations. 0xiso is a personal account,
-  so check it works: a repository's Dependency Dashboard and the
-  [Mend job log](https://developer.mend.io/) show the effective config,
-  and Renovate PRs carry the `dependencies` label. If it does not apply, rename the file back to
-  `default.json` and add `"extends": ["github>0xiso/renovate-config"]` to each
-  repository instead.
+- If it does not apply, check a repository's Dependency Dashboard and the
+  [Mend job log](https://developer.mend.io/) (they show the effective config);
+  Renovate PRs carry the `dependencies` label. As a fallback, rename the file
+  to `default.json` and add `"extends": ["github>isoo-pw/renovate-config"]` to
+  each repository.
 
 ## What `org-inherited-config.json` does
 
